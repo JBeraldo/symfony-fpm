@@ -1,0 +1,13 @@
+framework:
+    cache:
+        app: cache.adapter.redis
+        system: cache.adapter.system
+
+        directory: '%kernel.cache_dir%/pools'
+
+        default_redis_provider: 'redis://cache'
+
+        pools:
+        # creates a "custom_thing.cache" service
+        # autowireable via "CacheInterface $customThingCache"
+        # uses the "app" cache configuration
